@@ -16,6 +16,7 @@
 # random
 # pararealizar a escolha do computador.
 
+
 import random
 
 def pegar_jogada_pc() -> str:

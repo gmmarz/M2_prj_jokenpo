@@ -1,0 +1,4 @@
+selecionando um texto com ctrl + d
+é possível selecionar mais da mesma ocorrência do texto. 
+
+Permitindo alterar várias partes do código ao mesmo tempo.
