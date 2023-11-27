@@ -1,0 +1,42 @@
+dontpad.com/inf219-2711
+
+PROJETO
+
+import random
+
+opcoes = ("pedra", "papel", "tesoura")
+
+def escolha_jogador():
+    while True:
+        escolha = input("Escolha uma opção ['pedra', 'papel', 'tesoura']: ").lower()
+
+        if escolha not in opcoes:
+            print("Escolha inválida! Tente novamente.")
+        else: 
+            return escolha
+        
+def verificar_vencedor(jogador, computador):
+    if jogador == computador:
+        return "Empate"
+    elif (jogador == "pedra" and computador == "tesoura") or \
+        (jogador == "papel" and computador == "pedra") or \
+        (jogador == "tesoura" and computador == "papel"):
+        return "Você venceu!"
+    else:
+        return "A maquina venceu!"
+
+controle = True
+while controle:
+    escolha_computador = random.choice(opcoes)
+
+    jogada = escolha_jogador()
+
+    print(f"A maquina escolheu: {escolha_computador}")
+
+    resultado = verificar_vencedor(jogada, escolha_computador)
+    print(resultado)
+
+    resposta = input("Você quer continuar? [S/N] ").lower()
+
+    if resposta == "n":
+        controle = False
